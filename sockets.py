@@ -81,11 +81,8 @@ clients = list()
 def send_all(msg):
     for client in clients:
         client.put(msg)
-
-
 def send_all_json(obj):
     send_all(json.dumps(obj))
-
 
 def set_listener(entity, data):
     ''' do something with the update ! '''
